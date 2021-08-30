@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Project Practice 1</title>
+    <style>
+        .newspaper {
+            -webkit-column-count: 3; /* Chrome, Safari, Opera */
+            -moz-column-count: 3; /* Firefox */
+            column-count: 3;
+        }
+        .head {
+            text-align: center;
+        }
+    </style>
+    <link rel="shortcut icon" href="">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.1/socket.io.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    
+    
+    <script>
+         
+
+        $(document).ready(function() {
+            let loc = window.location.href;
+        
+            let socket = io(loc);
+        
+            socket.on('notification', function(value){
+                $("#result").html(value)
+            });
+            
+            $("#register").on('click', () => {
+                let username = $('#username').val() ;
+                let password = $('#password').val() ; 
+                socket.emit('register',{"username":username, "password": password});
+            });
+            
+           /* $("#addField").on('click', () => {
+                let username = $('#username').val() ;
+                socket.emit('addField',{"username":username});
+            });*/
+            
+            
+            
+        });
+     </script>
+    
+  </head>
+  <body>
+      <h2>Project Practice 1</h2>
+      <input type="text" id="username" placeholder="enter username" style="width:200px" >
+      <hr>
+      <input type="password" id="password" placeholder="password">
+      <button id="register">Sign Up</button>
+      <button id="addField">Add Field Recipes For User</button>
+    
+      <hr><hr>
+      <div id="result">
+          
+      </div>
+  </body>
+</html>

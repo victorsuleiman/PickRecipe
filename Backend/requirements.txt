@@ -1,0 +1,8 @@
+Flask
+Werkzeug
+gunicorn==20.1.0
+PyMongo
+Flask-PyMongo
+pymongo[srv]
+flask-socketio
+eventlet==0.30.2
