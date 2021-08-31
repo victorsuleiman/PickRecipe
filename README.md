@@ -16,7 +16,7 @@
 Pick Your Recipe is designed to be a mobile app that shows a curated list of recipes from a central database so the user can register, login into the app and see it.
 Apart from finding grocery stores nearby their location and adding ingredients to a pantry connected to their account, they can also click on a recipe to see the ingredients and directions to the recipe. Each recipe page shows if they can cook it at home or if there are ingredients missing by using their pantries. They can also leave a rating, a comment, and favorite a specific recipe so it shows on their own favorite recipe list.
 
-Contributors:
+## Contributors:
 Gustavo Bruno Pereira de Freitas - https://github.com/ac-gbpfreitas
 
 Victor Correa Suleiman - https://github.com/victorsuleiman
